@@ -556,18 +556,20 @@ function setup () {
     p1.setFlag(SpriteFlag.BounceOnWall, true)
     p2.setFlag(SpriteFlag.BounceOnWall, true)
     _11 = randint(1, 4)
-    if (_11 == 1) {
-        y_11 = -1
-        x_11 = 1
-    } else if (_11 == 2) {
-        y_11 = 1
-        x_11 = -1
-    } else if (_11 == 3) {
-        y_11 = 1
-        x_11 = 1
-    } else if (_11 == 4) {
-        x_11 = -1
-        y_11 = -1
+    if (!(ball.overlapsWith(goal_p1) || ball.overlapsWith(goal_p2))) {
+        if (_11 == 1) {
+            y_11 = -1
+            x_11 = 1
+        } else if (_11 == 2) {
+            y_11 = 1
+            x_11 = -1
+        } else if (_11 == 3) {
+            y_11 = 1
+            x_11 = 1
+        } else if (_11 == 4) {
+            x_11 = -1
+            y_11 = -1
+        }
     }
 }
 let x_11 = 0
